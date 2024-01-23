@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px 40px;
+}
+.link {
+  color: #a773b0;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100%;
+    &:hover{
+      color: #a773b0;
+    }
+}
