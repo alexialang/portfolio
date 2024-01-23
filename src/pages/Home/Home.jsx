@@ -1,5 +1,5 @@
 import classes from "./home.module.css";
-import { Progress } from '@mantine/core';
+import { Progress, Button } from '@mantine/core';
 
 const Home = () => {
 
@@ -27,18 +27,23 @@ const Home = () => {
         <p>Lorem error excepturi eaque distincg elit. nesciunt culpa ullam. Dolore earum ratione id.</p>
         <div className={classes.skillsBlock}>
           <div>
+              <h3></h3>
               <Progress className={classes.bar} color="rgba(255, 175, 105, 1)" value={90} animated /> <br/>
               <Progress color="rgba(255, 175, 105, 1)" value={40} animated /> <br/>
               <Progress color="rgba(255, 175, 105, 1)" value={50} animated /> <br/>
+              <Progress color="rgba(255, 175, 105, 1)" value={50} animated /> <br/>
+              <Progress color="rgba(255, 175, 105, 1)" value={50} animated /> <br/>
+              <Progress color="rgba(255, 175, 105, 1)" value={50} animated /> <br/>
+              <Progress color="rgba(255, 175, 105, 1)" value={50} animated /> <br/>
           </div>
-          <div> coucocucou</div>
+          <div>
+            <img src="../../src/assets/cv.png"></img>
+            <Button variant="filled" color="orange">Télécharger mon cv</Button>
+           </div>
         </div>
       </div>
       <div>
       <div>
-      <h1>Compétences</h1>
-
-    
       
     </div>
       </div>
