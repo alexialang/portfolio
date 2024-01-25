@@ -13,20 +13,21 @@
       height: 350px;
       margin-left: 70px;
     }
-    & h1 { 
-      -webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;
-      animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;
+    & .h1 { 
+      /* -webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;
+      animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both; */
       text-align: center;
-      font-size: 45px!important;
+      font-size: 20px!important;
       font-family: 'VT323', monospace;
       padding-top: 20px;
       padding-bottom: 20px;
-      padding-right: 90px;
-      padding-left: 50px;
+      padding-right: 50px;
+      padding-left: 20px;
       color: white;
       text-align: start;
       border-radius: 5px;
       background-color: rgba(148, 148, 147, 0.571);
+      width: 57%;
 
     }
 }
@@ -55,14 +56,22 @@ h2{
 
 /* skills */
 
+
 .skills {
   background-color: rgb(248, 248, 248);
+  padding-bottom: 60px;
     & h2,p{
       text-align: center;
+      margin: 0;
+      padding: 40px;
     }
     & img {
       height: 450px;
       border: 1px solid black;
+      border-radius: 2px;
+    }
+    & h3{
+      margin: 0!important;
     }
 }
 
@@ -88,4 +97,44 @@ h2{
   flex-direction: column;
   row-gap: 20px;
 
+}
+
+/* Mes projets */
+
+.projets{
+  background-color:rgb(247, 246, 240);
+    & img{
+      height: 300px;
+    }
+    & h2{
+      text-align: center;
+      margin-top: 0;
+      padding-top: 20 px;
+    }
+}
+.blockProjets {
+  display: flex;
+  width: 75%;
+  margin: auto;
+  column-gap: 60px;
+  align-items: center;
+  justify-content: center;
+    & div{ 
+      transition: all 0.2s ease;
+      background-color: white;
+      box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.11);
+      padding: 40px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    & div:hover{
+      transition: all 0.2s ease;
+      box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.15);
+      padding: 42px;
+    }
+}
+
+.test{
+  /* background-color: black; */
+  height: 100px;
 }

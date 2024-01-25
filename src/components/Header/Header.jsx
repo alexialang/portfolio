@@ -107,10 +107,10 @@ export const Header = () => {
         </Menu> */}
 
         <Link to="/devis">
-          <Button variant="subtle">Devis</Button>
+          <Button variant="subtle">Page 3</Button>
         </Link>
         <Link to="/contact">
-          <Button variant="subtle">Nous contacter</Button>
+          <Button variant="subtle">Page4</Button>
         </Link>
       </div>
     </div>
