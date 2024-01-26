@@ -132,9 +132,53 @@ h2{
       box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.15);
       padding: 42px;
     }
+    
 }
 
 .test{
   /* background-color: black; */
   height: 100px;
+}
+
+@media (max-width: 1000px){
+  .firstSection{
+    display: flex;
+    flex-direction: row;
+      & img {
+        width: 200px;
+        height: 200px;
+      }
+  }
+  .skillsBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blockProjets{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+@media (max-width :700px){
+  .backgroundFirstSection{
+    display: flex;
+    flex-direction: column-reverse;
+      & img{
+        margin-left: 0;
+      }
+  }
+  .aPropos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bar{
+    width: 200px;
+  }
+  
 }
