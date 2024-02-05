@@ -1,12 +1,12 @@
-import  { useEffect, useState, useRef, useCallback } from 'react';
-import PropTypes from 'prop-types';
+import { useEffect, useState, useRef, useCallback } from "react";
+import PropTypes from "prop-types";
 
 const Titre = ({ contenu }) => {
-  const [texte, setTexte] = useState('');
+  const [texte, setTexte] = useState("");
   const timerRef = useRef(null);
 
   const demarrerAnimation = useCallback(() => {
-    setTexte('');
+    setTexte("");
     let index = 0;
     timerRef.current = setInterval(() => {
       if (index < contenu.length) {
@@ -15,10 +15,10 @@ const Titre = ({ contenu }) => {
       } else {
         clearInterval(timerRef.current);
         // Réinitialise l'état pour permettre la prochaine animation
-        setTexte('');
+        setTexte("");
         index = 0;
         // Démarre la nouvelle animation après une pause de 1 seconde (ajustable selon vos besoins)
-        setTimeout(demarrerAnimation, 1000);
+        setTimeout(demarrerAnimation, 500);
       }
     }, 100);
   }, [contenu]);
@@ -32,7 +32,7 @@ const Titre = ({ contenu }) => {
 
   // Utilisez la propriété CSS white-space: pre-line pour conserver les retours à la ligne
   const styleTexte = {
-    whiteSpace: 'pre-line',
+    whiteSpace: "pre-line",
   };
 
   return (

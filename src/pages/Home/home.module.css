@@ -16,20 +16,45 @@
     & .h1 { 
       /* -webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;
       animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both; */
-      text-align: center;
-      font-size: 20px!important;
+     
+      font-size: 17px!important;
       font-family: 'VT323', monospace;
-      padding-top: 20px;
+      margin-top: 60px;
       padding-bottom: 20px;
       padding-right: 50px;
       padding-left: 20px;
       color: white;
-      text-align: start;
-      border-radius: 5px;
-      background-color: rgba(148, 148, 147, 0.571);
       width: 57%;
+      position: relative;
+      top: 0;
 
     }
+   
+}
+ .h1 { 
+  /* -webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;
+  animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both; */
+ 
+  font-size: 17px!important;
+  font-family: 'VT323', monospace;
+  margin-top: 60px!important;
+  padding-bottom: 20px;
+  color: white;
+  width: 57%;
+  position: relative;
+  top: 0;
+
+}
+
+.fixedContainer {
+  position: absolute;
+  padding-left: 10px;
+  text-align: start;
+  width: 97%;
+  height: 100px;
+  border-radius: 5px;
+  background-color: rgba(148, 148, 147, 0.571);
+
 }
 
 h2{
@@ -37,8 +62,6 @@ h2{
 }
 
 
-@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
-@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
 
 
 /* a propos */
@@ -75,6 +98,7 @@ h2{
     }
 }
 
+
 .skillsBlock{
   width: 70%;
   margin: auto;
@@ -103,8 +127,11 @@ h2{
 
 .projets{
   background-color:rgb(247, 246, 240);
+  padding-bottom: 140px;
     & img{
-      height: 300px;
+      width: 270px;
+      height: 200px;
+    
     }
     & h2{
       text-align: center;
@@ -112,6 +139,19 @@ h2{
       padding-top: 20 px;
     }
 }
+.backgroundImage{
+  background-image: url("../../assets/gpadi.png");
+  background-size: cover;
+  background-position: center;
+  width: 270px;
+  height: 160px;
+}
+
+.divBlockProjets{
+height: 200px;
+
+}
+
 .blockProjets {
   display: flex;
   width: 75%;
@@ -119,7 +159,7 @@ h2{
   column-gap: 60px;
   align-items: center;
   justify-content: center;
-    & div{ 
+    & .backgroundColor{ 
       transition: all 0.2s ease;
       background-color: white;
       box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.11);
@@ -127,7 +167,7 @@ h2{
       border-radius: 10px;
       margin-top: 20px;
     }
-    & div:hover{
+    & .backgroundColor:hover{
       transition: all 0.2s ease;
       box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.15);
       padding: 42px;
@@ -135,8 +175,8 @@ h2{
     
 }
 
-.test{
-  /* background-color: black; */
+footer {
+  background-color: rgb(201, 197, 175);
   height: 100px;
 }
 
