@@ -1,6 +1,6 @@
 import styles from "./home.module.css";
 import Titre from "../../components/Titre/Titre";
-import BlurSection from "../../components/BlurSection/BlurSection";
+// import BlurSection from "../../components/BlurSection/BlurSection";
 import { useForm } from "@mantine/form";
 import {
   Progress,
@@ -16,7 +16,6 @@ import { showNotification } from "@mantine/notifications";
 import emailJs from "@emailjs/browser";
 
 const Home = () => {
-  const blurClass = BlurSection();
   emailJs.init(import.meta.env.VITE_MAILJS_API_KEY);
 
   const form = useForm({
@@ -60,14 +59,12 @@ const Home = () => {
 
   return (
     <div className={styles.root}>
-      <div id="blurSection" className={blurClass}>
-        <div className={styles.firstSection}>
-          <div className={styles.backgroundFirstSection}>
-            <img src="/src/assets/alexia.png" />
-            <div className={styles.h1}>
-              <div className={styles.fixedContainer}>
-                <Titre contenu="    <h1> LANG  Alexia Developpeuse Web Junior </h1>" />
-              </div>
+      <div className={styles.firstSection}>
+        <div className={styles.backgroundFirstSection}>
+          <img src="/src/assets/alexia.png" />
+          <div className={styles.h1}>
+            <div className={styles.fixedContainer}>
+              <Titre contenu="    <h1> LANG  Alexia Developpeuse Web Junior </h1>" />
             </div>
           </div>
         </div>
@@ -77,18 +74,14 @@ const Home = () => {
         <div>
           <h2>A propos</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Recusandae, nesciunt totam? Ex officiis voluptas fuga explicabo
-            velit. Sapiente commodi exercitationem distinctio praesentium,
-            accusamus qui consectetur voluptatum unde omnis quo quis. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Id deleniti quos
-            aliquam porro! Ad, adipisci? Sint, expedita! Soluta, ratione ullam!
-            Numquam laudantium non accusamus nostrum necessitatibus
-            consequuntur, reiciendis quod at! Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Voluptate, ea sunt! Saepe ullam enim
-            porro exercitationem delectus magni consectetur repellendus quasi
-            temporibus modi error rem officiis, dignissimos numquam magnam
-            atque.
+            En reconvertion professionnel je suis en formation de développeuse
+            Web/Web mobile au sein de Metz Numeric School. Après avoir réalisé
+            des études dans l’art, le design et travaillé presque 3 ans dans la
+            joaillerie en tant que sertisseuse, j’ai décidé de me réorienter. La
+            réflexion et la logique manquant grandement dans mon domaine, c’est
+            avec l’envie et le besoin d’apprendre que je me suis naturellement
+            tournée vers le développement car j’ai toujours eu un fort attrait
+            pour le monde du numerique.
           </p>
         </div>
         <img
@@ -173,101 +166,90 @@ const Home = () => {
                 Réalisation d’un site avec Vite+React fait durant un stage de
                 deux semaines du 21/11/2023 au 01/12/2023{" "}
               </p>
+              <Button className={styles.buttonProjet}>Acceder au projet</Button>
             </div>
           </div>
           <div className={styles.divBlockProjets}>
             <div className={styles.backgroundColor}>
               <div className={styles.backgroundSecondImage}></div>
-              <p>Calculette Js</p>{" "}
+              <p>Calculette Js en cours de réalisation</p>{" "}
+              <Button className={styles.buttonProjet}>Acceder au projet</Button>
             </div>
           </div>
           <div className={styles.divBlockProjets}>
             <div className={styles.backgroundColor}>
-              <div className={styles.backgroundImage}></div>
-              <p>coucou</p>{" "}
+              <div className={styles.backgroundLastImage}></div>
+              <p>App Web meteo en cours de réalisation</p>{" "}
+              <Button className={styles.buttonProjet}>Acceder au projet</Button>
             </div>
           </div>
         </div>
         <div className={styles.divBlockProjets}></div>
       </div>
-      <div>
+      {/* CONTACT */}
+      <div className={styles.contact}>
         <h2>Me contacter</h2>
-        {/*  */}
-
-        <div className={styles.root}>
-          <div className={styles.backgroundImg}>
-            <div className={styles.divSize}>
-              <h1>Nous contacter</h1>
-              <div className={styles.block}></div>
-            </div>
+        <div className={styles.divForm}>
+          <div>
+            <p>Remplissez le formulaire ci dessous pour me contacter :</p>
           </div>
-          <div className={styles.divForm}>
-            <div>
-              <p>Remplissez le formulaire ci dessous pour me contacter :</p>
-            </div>
-            <div>
-              <Box>
-                <form
-                  className={styles.form}
-                  onSubmit={form.onSubmit(sendEmail)}
-                >
-                  <h2>Formulaire de contact</h2>
-                  <TextInput
-                    withAsterisk
-                    label="Nom"
-                    {...form.getInputProps("lastName")}
-                    required
-                  />
-                  <TextInput
-                    withAsterisk
-                    label="Prénom"
-                    {...form.getInputProps("firstName")}
-                    required
-                  />
-                  <TextInput
-                    withAsterisk
-                    label="E-mail"
-                    {...form.getInputProps("email")}
-                    required
-                  />
-                  <TextInput
-                    withAsterisk
-                    label="Numéro de téléphone"
-                    {...form.getInputProps("phoneNumber")}
-                    required
-                  />
-                  <Textarea
-                    label="Message"
-                    autosize
-                    minRows={2}
-                    {...form.getInputProps("message")}
-                    required
-                  />
-                  <Checkbox
-                    className={styles.marginTop}
-                    defaultChecked
-                    label={
-                      <>
-                        En cochant cette case, j’accepte la
-                        <Anchor href="/conf" target="_blank" inherit>
-                          Politique de confidentialité de ce site
-                        </Anchor>
-                      </>
-                    }
-                  />
+          <div>
+            <Box>
+              <form className={styles.form} onSubmit={form.onSubmit(sendEmail)}>
+                <h2>Formulaire de contact</h2>
+                <TextInput
+                  withAsterisk
+                  label="Nom"
+                  {...form.getInputProps("lastName")}
+                  required
+                />
+                <TextInput
+                  withAsterisk
+                  label="Prénom"
+                  {...form.getInputProps("firstName")}
+                  required
+                />
+                <TextInput
+                  withAsterisk
+                  label="E-mail"
+                  {...form.getInputProps("email")}
+                  required
+                />
+                <TextInput
+                  withAsterisk
+                  label="Numéro de téléphone"
+                  {...form.getInputProps("phoneNumber")}
+                  required
+                />
+                <Textarea
+                  label="Message"
+                  autosize
+                  minRows={2}
+                  {...form.getInputProps("message")}
+                  required
+                />
+                <Checkbox
+                  className={styles.marginTop}
+                  defaultChecked
+                  label={
+                    <>
+                      En cochant cette case, j’accepte la
+                      <Anchor href="/conf" target="_blank" inherit>
+                        Politique de confidentialité de ce site
+                      </Anchor>
+                    </>
+                  }
+                />
 
-                  <Group justify="center" mt="md">
-                    <Button type="submit" color="" className={styles.marginTop}>
-                      Envoyer
-                    </Button>
-                  </Group>
-                </form>
-              </Box>
-            </div>
+                <Group justify="center" mt="md">
+                  <Button type="submit" color="" className={styles.marginTop}>
+                    Envoyer
+                  </Button>
+                </Group>
+              </form>
+            </Box>
           </div>
         </div>
-
-        {/*  */}
       </div>
       <footer>coucou</footer>
     </div>

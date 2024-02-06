@@ -136,8 +136,14 @@ h2{
     & h2{
       text-align: center;
       margin-top: 0;
-      padding-top: 20 px;
+      padding-top: 40px;
     }
+}
+
+.buttonProjet{
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .backgroundFirstImage{
@@ -150,6 +156,14 @@ h2{
 
 .backgroundSecondImage{
   background-image: url("../../assets/calculator.png");
+  background-size: cover;
+  background-position: center;
+  width: 270px;
+  height: 160px;
+}
+
+.backgroundLastImage{
+  background-image: url("../../assets/cloud.png");
   background-size: cover;
   background-position: center;
   width: 270px;
@@ -169,6 +183,7 @@ height: 200px;
   align-items: center;
   justify-content: center;
     & .backgroundColor{ 
+      height: 400px;
       transition: all 0.2s ease;
       background-color: white;
       box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.11);
@@ -187,7 +202,9 @@ height: 200px;
 
 /* contact */
 
-
+.contact h2{
+  text-align: center;
+}
 .divForm {
   margin: auto;
   width: 80%;
@@ -202,6 +219,7 @@ height: 200px;
   background-color: #f5f5f5;
   padding: 30px;
   margin-top: 30px;
+  margin-bottom: 70px;
   border-radius: 20px;
   box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.11);
 }
@@ -220,6 +238,7 @@ form h2 {
 .marginTop {
   margin-top: 10px;
 }
+
 
 
 footer {
