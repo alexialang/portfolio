@@ -193,18 +193,14 @@ const Home = () => {
       <div>
         <h2>Me contacter</h2>
         {/*  */}
-        return (
+
         <div className={styles.root}>
           <div className={styles.backgroundImg}>
             <div className={styles.divSize}>
               <h1>Nous contacter</h1>
-              <div className={styles.block}>
-                <p>Nous contacter</p>
-              </div>
+              <div className={styles.block}></div>
             </div>
           </div>
-          {/* Section a propos */}
-
           <div className={styles.divForm}>
             <div>
               <p>Remplissez le formulaire ci dessous pour me contacter :</p>
@@ -252,7 +248,7 @@ const Home = () => {
                     defaultChecked
                     label={
                       <>
-                        En cochant cette case, j’accepte la{" "}
+                        En cochant cette case, j’accepte la
                         <Anchor href="/conf" target="_blank" inherit>
                           Politique de confidentialité de ce site
                         </Anchor>
@@ -270,7 +266,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        );
+
         {/*  */}
       </div>
       <footer>coucou</footer>

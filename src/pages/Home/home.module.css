@@ -207,7 +207,7 @@ height: 200px;
 }
 
 form h2 {
-  background-color: #e09b14;
+  background-color:  rgb(201, 197, 175);
   padding: 6px 100px;
   margin-top: 30px;
   border-radius: 10px;
@@ -272,3 +272,4 @@ footer {
   
 }
 
+ 
