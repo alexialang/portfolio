@@ -1,116 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import styles from "./header.module.css";
-import { Button, Menu } from "@mantine/core";
-import { useNavigate } from "react-router-dom";
+import { Button } from "@mantine/core";
 import PropTypes from "prop-types";
 
-
 export const Header = () => {
-  const navigate = useNavigate();
-
   return (
-    
     <div className={styles.root}>
-      {/* <Burger
-        opened={opened}
-        onClick={toggle}
-        aria-label="Toggle navigation"
-        classNames={{
-          root: styles.burger,
-        }}
-      /> */}
-      <div className={styles.imgS}>
-      </div>
+      <div className={styles.imgS}></div>
       <div className={styles.nav}>
-        <Link to="/">
+        <Link to="home" spy={true} smooth={true} offset={-40} duration={500}>
           <Button variant="subtle">Accueil</Button>
         </Link>
-        <Menu
-          // position="bottom"
-          // trigger="hover"
-          // openDelay={100}
-          // closeDelay={200}
-          // classNames={{
-          //   item: styles.subItem,
-          // }}
-        >
-          <Menu.Target>
-            <Button variant="subtle">Page 1</Button>
-          </Menu.Target>
-          <Menu.Dropdown>
-            <Menu.Item
-              className=""
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              
-            </Menu.Item>
-            <Menu.Item
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              Page 2
-            </Menu.Item>
-          </Menu.Dropdown>
-        </Menu>
-        <Menu
-          position="bottom"
-          trigger="hover"
-          openDelay={100}
-          closeDelay={200}
-          classNames={{
-            item: styles.subItem,
-          }}
-        >
-          <Menu.Target>
-            <Button variant="subtle">Page 1</Button>
-          </Menu.Target>
-
-          <Menu.Dropdown>
-            <Menu.Item
-              className=""
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              Page 2
-            </Menu.Item>
-
-          </Menu.Dropdown>
-        </Menu>
-        {/* 
-        <Menu
-          position="bottom"
-          trigger="hover"
-          openDelay={100}
-          closeDelay={200}
-          classNames={{
-            item: styles.subItem,
-          }}
-        >
-          <Menu.Target>
-            <Button variant="subtle">Autres Services</Button>
-          </Menu.Target>
-
-          <Menu.Dropdown>
-            <Menu.Item
-              className=""
-              onClick={() => {
-                navigate("/dtg");
-              }}
-            >
-              DTG
-            </Menu.Item>
-          </Menu.Dropdown>
-        </Menu> */}
-
-        <Link to="/devis">
-          <Button variant="subtle">Page 3</Button>
+        <Link to="aPropos" spy={true} smooth={true} offset={-35} duration={500}>
+          <Button variant="subtle">A propos</Button>
         </Link>
-        <Link to="/contact">
-          <Button variant="subtle">Page4</Button>
+
+        <Link
+          to="competence"
+          spy={true}
+          smooth={true}
+          offset={-35}
+          duration={500}
+        >
+          <Button variant="subtle">Compétences</Button>
+        </Link>
+        <Link to="projet" spy={true} smooth={true} offset={-35} duration={500}>
+          <Button variant="subtle">Mes projets</Button>
+        </Link>
+        <Link to="contact" spy={true} smooth={true} offset={-35} duration={500}>
+          <Button variant="subtle">Contact</Button>
         </Link>
       </div>
     </div>

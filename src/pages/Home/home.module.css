@@ -123,6 +123,8 @@ h2{
 
 }
 
+
+
 /* Mes projets */
 
 .projets{
@@ -140,10 +142,8 @@ h2{
     }
 }
 
-.buttonProjet{
-  display: flex;
-  align-items: center;
-  justify-content: end;
+.alignCenter{
+ text-align: center;
 }
 
 .backgroundFirstImage{
@@ -197,6 +197,10 @@ height: 200px;
       padding: 42px;
     }
     
+}
+
+.txtCard{
+  height: 5em;
 }
 
 

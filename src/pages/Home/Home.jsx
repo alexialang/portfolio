@@ -59,7 +59,7 @@ const Home = () => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.firstSection}>
+      <div id="home" className={styles.firstSection}>
         <div className={styles.backgroundFirstSection}>
           <img src="/src/assets/alexia.png" />
           <div className={styles.h1}>
@@ -70,7 +70,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={styles.aPropos}>
+      <div className={styles.aPropos} id="aPropos">
         <div>
           <h2>A propos</h2>
           <p>
@@ -89,7 +89,7 @@ const Home = () => {
           src="/src/assets/alexiaPetite.png"
         ></img>
       </div>
-      <div className={styles.skills}>
+      <div id="competence" className={styles.skills}>
         <h2>Mes compétences</h2>
 
         <div className={styles.skillsBlock}>
@@ -148,46 +148,68 @@ const Home = () => {
           </div>
           <div>
             <img src="../../src/assets/cv.png"></img>
-            <a href="fichier.html" download="../../src/assets/cv.png">
-              <Button variant="filled" color="orange">
-                Télécharger mon cv
-              </Button>
+            <a
+              className={styles.alignCenter}
+              href="fichier.html"
+              download="../../src/assets/cv.png"
+            >
+              <div>
+                <Button variant="filled" color="orange">
+                  Télécharger mon cv
+                </Button>
+              </div>
             </a>
           </div>
         </div>
       </div>
-      <div className={styles.projets}>
+      <div id="projet" className={styles.projets}>
         <h2>Mes projets</h2>
         <div className={styles.blockProjets}>
           <div className={styles.divBlockProjets}>
             <div className={styles.backgroundColor}>
               <div className={styles.backgroundFirstImage}></div>
-              <p>
+              <p className={styles.txtCard}>
                 Réalisation d’un site avec Vite+React fait durant un stage de
                 deux semaines du 21/11/2023 au 01/12/2023{" "}
               </p>
-              <Button className={styles.buttonProjet}>Acceder au projet</Button>
+
+              <div className={styles.alignCenter}>
+                <Button>Acceder au projet</Button>
+              </div>
             </div>
           </div>
           <div className={styles.divBlockProjets}>
             <div className={styles.backgroundColor}>
               <div className={styles.backgroundSecondImage}></div>
-              <p>Calculette Js en cours de réalisation</p>{" "}
-              <Button className={styles.buttonProjet}>Acceder au projet</Button>
+              <div>
+                <p className={styles.txtCard}>
+                  Calculette Js en cours de réalisation
+                </p>
+              </div>
+
+              <div className={styles.alignCenter}>
+                <Button>Acceder au projet</Button>
+              </div>
             </div>
           </div>
           <div className={styles.divBlockProjets}>
             <div className={styles.backgroundColor}>
               <div className={styles.backgroundLastImage}></div>
-              <p>App Web meteo en cours de réalisation</p>{" "}
-              <Button className={styles.buttonProjet}>Acceder au projet</Button>
+              <div>
+                <p className={styles.txtCard}>
+                  App Web meteo en cours de réalisation
+                </p>
+              </div>
+              <div className={styles.alignCenter}>
+                <Button>Acceder au projet</Button>
+              </div>
             </div>
           </div>
         </div>
         <div className={styles.divBlockProjets}></div>
       </div>
       {/* CONTACT */}
-      <div className={styles.contact}>
+      <div className={styles.contact} id="contact">
         <h2>Me contacter</h2>
         <div className={styles.divForm}>
           <div>
