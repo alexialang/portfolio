@@ -1,4 +1,4 @@
-import styles from "./home.module.css";
+import classes from "./home.module.css";
 import Titre from "../../components/Titre/Titre";
 // import BlurSection from "../../components/BlurSection/BlurSection";
 import { useForm } from "@mantine/form";
@@ -10,10 +10,10 @@ import {
   Button,
   Textarea,
   Checkbox,
-  Anchor,
 } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
 import emailJs from "@emailjs/browser";
+import { Link } from "react-scroll";
 
 const Home = () => {
   emailJs.init(import.meta.env.VITE_MAILJS_API_KEY);
@@ -58,19 +58,19 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.root}>
-      <div id="home" className={styles.firstSection}>
-        <div className={styles.backgroundFirstSection}>
+    <div className={classes.root}>
+      <div id="home" className={classes.firstSection}>
+        <div className={classes.backgroundFirstSection}>
           <img src="/src/assets/alexia.png" />
-          <div className={styles.h1}>
-            <div className={styles.fixedContainer}>
+          <div className={classes.h1}>
+            <div className={classes.fixedContainer}>
               <Titre contenu="    <h1> LANG  Alexia Developpeuse Web Junior </h1>" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className={styles.aPropos} id="aPropos">
+      <div className={classes.aPropos} id="aPropos">
         <div>
           <h2>A propos</h2>
           <p>
@@ -81,143 +81,208 @@ const Home = () => {
             réflexion et la logique manquant grandement dans mon domaine, c’est
             avec l’envie et le besoin d’apprendre que je me suis naturellement
             tournée vers le développement car j’ai toujours eu un fort attrait
-            pour le monde du numerique.
+            pour le monde du numerique.En reconvertion professionnel je suis en
+            formation de développeuse Web/Web mobile au sein de Metz Numeric
+            School. Après avoir réalisé des études dans l’art, le design et
+            travaillé presque 3 ans dans l
           </p>
         </div>
         <img
-          className={styles.pictApropos}
+          className={classes.pictApropos}
           src="/src/assets/alexiaPetite.png"
         ></img>
       </div>
-      <div id="competence" className={styles.skills}>
+      <div id="competence" className={classes.skills}>
         <h2>Mes compétences</h2>
 
-        <div className={styles.skillsBlock}>
-          <div>
+        <div className={classes.skillsBlock}>
+          <div className={classes.progressBlock}>
             <h3>HTML</h3>
             <Progress
-              className={styles.bar}
-              color="rgba(255, 175, 105, 1)"
+              className={classes.bar}
+              color="rgb(201, 197, 175)"
               value={90}
               animated
             />{" "}
             <br />
             <h3>CSS</h3>
             <Progress
-              className={styles.bar}
-              color="rgba(255, 175, 105, 1)"
+              className={classes.bar}
+              color="rgb(201, 197, 175)"
               value={80}
               animated
             />{" "}
             <br />
             <h3>Javascript</h3>
             <Progress
-              className={styles.bar}
-              color="rgba(255, 175, 105, 1)"
-              value={20}
+              className={classes.bar}
+              color="rgb(201, 197, 175)"
+              value={40}
               animated
             />{" "}
             <br />
             <h3>React</h3>
             <Progress
-              className={styles.bar}
-              color="rgba(255, 175, 105, 1)"
-              value={35}
+              className={classes.bar}
+              color="rgb(201, 197, 175)"
+              value={45}
               animated
             />{" "}
             <br />
             <h3>PHP</h3>
             <Progress
-              className={styles.bar}
-              color="rgba(255, 175, 105, 1)"
-              value={10}
+              className={classes.bar}
+              color="rgb(201, 197, 175)"
+              value={40}
+              animated
+            />{" "}
+            <br />
+            <h3>Python</h3>
+            <Progress
+              className={classes.bar}
+              color="rgb(201, 197, 175)"
+              value={50}
               animated
             />{" "}
             <br />
             <h3>SQL</h3>
             <Progress
-              className={styles.bar}
-              color="rgba(255, 175, 105, 1)"
-              value={50}
+              className={classes.bar}
+              color="rgb(201, 197, 175)"
+              value={70}
               animated
             />{" "}
-            <br />
-            <h3>Figma</h3>
-            <Progress color="rgba(255, 175, 105, 1)" value={60} animated />{" "}
             <br />
           </div>
           <div>
             <img src="../../src/assets/cv.png"></img>
             <a
-              className={styles.alignCenter}
+              className={classes.alignCenter}
               href="fichier.html"
               download="../../src/assets/cv.png"
             >
               <div>
-                <Button variant="filled" color="orange">
-                  Télécharger mon cv
-                </Button>
+                <Button variant="filled">Télécharger mon cv</Button>
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div id="projet" className={styles.projets}>
+      <div id="projet" className={classes.projets}>
         <h2>Mes projets</h2>
-        <div className={styles.blockProjets}>
-          <div className={styles.divBlockProjets}>
-            <div className={styles.backgroundColor}>
-              <div className={styles.backgroundFirstImage}></div>
-              <p className={styles.txtCard}>
+        <div className={classes.blockProjets}>
+          <div>
+            <div className={classes.backgroundColor}>
+              <div className={classes.backgroundGpadi}></div>
+              <p className={classes.txtCard}>
                 Réalisation d’un site avec Vite+React fait durant un stage de
-                deux semaines du 21/11/2023 au 01/12/2023{" "}
+                deux semaines{" "}
               </p>
 
-              <div className={styles.alignCenter}>
-                <Button>Acceder au projet</Button>
+              <div className={classes.alignCenter}>
+                <a
+                  href="https://test1-a8348.web.app/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <Button>Acceder au projet</Button>
+                </a>
               </div>
             </div>
           </div>
-          <div className={styles.divBlockProjets}>
-            <div className={styles.backgroundColor}>
-              <div className={styles.backgroundSecondImage}></div>
+          <div>
+            <div className={classes.backgroundColor}>
+              <div className={classes.backgroundCalculator}></div>
               <div>
-                <p className={styles.txtCard}>
-                  Calculette Js en cours de réalisation
-                </p>
+                <p className={classes.txtCard}>Calculette Js</p>
               </div>
 
-              <div className={styles.alignCenter}>
-                <Button>Acceder au projet</Button>
+              <div className={classes.alignCenter}>
+                <a
+                  href="https://calculette-js.web.app/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <Button>Acceder au projet</Button>
+                </a>
               </div>
             </div>
           </div>
-          <div className={styles.divBlockProjets}>
-            <div className={styles.backgroundColor}>
-              <div className={styles.backgroundLastImage}></div>
+          <div>
+            <div className={classes.backgroundColor}>
+              <div className={classes.backgroundToDo}></div>
               <div>
-                <p className={styles.txtCard}>
-                  App Web meteo en cours de réalisation
-                </p>
+                <p className={classes.txtCard}>Todo List JS</p>
               </div>
-              <div className={styles.alignCenter}>
+              <div className={classes.alignCenter}>
                 <Button>Acceder au projet</Button>
               </div>
             </div>
           </div>
         </div>
-        <div className={styles.divBlockProjets}></div>
+        <div className={classes.blockProjets}>
+          <div>
+            <div className={classes.backgroundColor}>
+              <div className={classes.backgroundCloud}></div>
+              <p className={classes.txtCard}>
+                Réalisation d’un site avec Vite+React fait durant un stage de
+                deux semaines
+              </p>
+
+              <div className={classes.alignCenter}>
+                <a href="https://test1-a8348.web.app/">
+                  <Button>Acceder au projet</Button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className={classes.backgroundColor}>
+              <div className={classes.backgroundSecondImage}></div>
+              <div>
+                <p className={classes.txtCard}>
+                  Calculette Js en cours de réalisation
+                </p>
+              </div>
+
+              <div className={classes.alignCenter}>
+                <a href="https://calculette-js.web.app/">
+                  <Button>Acceder au projet</Button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className={classes.backgroundColor}>
+              <div className={classes.backgroundLastImage}></div>
+              <div>
+                <p className={classes.txtCard}>
+                  App Web meteo en cours de réalisation
+                </p>
+              </div>
+              <div className={classes.alignCenter}>
+                <Button>Acceder au projet</Button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div></div>
       </div>
       {/* CONTACT */}
-      <div className={styles.contact} id="contact">
-        <h2>Me contacter</h2>
-        <div className={styles.divForm}>
+      <div className={classes.contact} id="contact">
+        <h2 className={classes.h2contact}>Me contacter</h2>
+        <div className={classes.divForm}>
           <div>
-            <p>Remplissez le formulaire ci dessous pour me contacter :</p>
+            <p className={classes.pcontact}>
+              Remplissez le formulaire ci dessous pour me contacter :
+            </p>
           </div>
           <div>
             <Box>
-              <form className={styles.form} onSubmit={form.onSubmit(sendEmail)}>
+              <form
+                className={classes.form}
+                onSubmit={form.onSubmit(sendEmail)}
+              >
                 <h2>Formulaire de contact</h2>
                 <TextInput
                   withAsterisk
@@ -250,21 +315,24 @@ const Home = () => {
                   {...form.getInputProps("message")}
                   required
                 />
+
                 <Checkbox
-                  className={styles.marginTop}
+                  className={classes.row}
                   defaultChecked
                   label={
                     <>
                       En cochant cette case, j’accepte la
-                      <Anchor href="/conf" target="_blank" inherit>
-                        Politique de confidentialité de ce site
-                      </Anchor>
+                      <Link href="/conf" target="_blank" inherit>
+                        <p className={classes.link}>
+                          Politique de confidentialité de ce site
+                        </p>
+                      </Link>
                     </>
                   }
                 />
 
                 <Group justify="center" mt="md">
-                  <Button type="submit" color="" className={styles.marginTop}>
+                  <Button type="submit" color="" className={classes.marginTop}>
                     Envoyer
                   </Button>
                 </Group>
@@ -273,7 +341,23 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <footer>coucou</footer>
+      <footer>
+        <div className={classes.divFooter}>
+          <h3>Mes coordonées</h3>
+          <ul>
+            <li>+33646613228</li> <li>alexialang2@gmail.com</li>
+            <li className={classes.alignItem}>
+              <a href="https://github.com/alexialang">
+                <img src="../../src/assets/github.png" />
+              </a>
+              <a href="https://www.linkedin.com/in/alexia-lang/">
+                <img src="../../src/assets/linkedin.png" />
+              </a>
+            </li>
+            <li></li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 };

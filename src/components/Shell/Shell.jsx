@@ -1,4 +1,4 @@
-import { Header } from "../Header/Header"
+import { Header } from "../Header/Header";
 import { Main } from "../Main/Main";
 import { AppShell } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -8,9 +8,8 @@ export const Shell = () => {
   const [opened, { toggle }] = useDisclosure();
 
   return (
-    <AppShell
-    >
-        <AppShell.Header>
+    <AppShell>
+      <AppShell.Header>
         <Header toggle={toggle} opened={opened} />
       </AppShell.Header>
       <AppShell.Navbar>

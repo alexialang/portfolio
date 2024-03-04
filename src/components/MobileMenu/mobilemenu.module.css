@@ -13,3 +13,31 @@
       color: #a773b0;
     }
 }
+@media (min-width:760px){
+  .mobileMenu{
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: relative; /* Pour positionner correctement le contenu du menu */
+}
+
+
+
+.opened .nav {
+  transform: translateX(0); /* Afficher la navigation en la déplaçant vers la gauche */
+}
+
+.mobileMenu {
+  position: relative;
+  background-color: none; /* Pour positionner correctement le contenu du menu */
+}
+
+
+
+.opened .nav {
+  transform: translateX(0);
+  background-color: white; /* Afficher la navigation en la déplaçant vers la gauche */
+}
+
