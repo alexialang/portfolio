@@ -68,4 +68,9 @@ h1{
   h1{
   font-size: 1em!important;
 }}
+@media (min-width: 1700px){
+  h1{
+    margin-top: 0;
+  font-size: 3em!important;
+}}
 

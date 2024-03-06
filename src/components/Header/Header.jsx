@@ -1,12 +1,19 @@
 import { Link } from "react-scroll";
 import styles from "./header.module.css";
-import { Button } from "@mantine/core";
+import { Button, Burger } from "@mantine/core";
 import PropTypes from "prop-types";
 
-export const Header = () => {
+export const Header = ({ opened, toggle }) => {
   return (
     <div className={styles.root}>
-      <div className={styles.imgS}></div>
+      <Burger
+        opened={opened}
+        onClick={toggle}
+        aria-label="Toggle navigation"
+        classNames={{
+          root: styles.burger,
+        }}
+      />
       <div className={styles.nav}>
         <Link to="home" spy={true} smooth={true} offset={-40} duration={500}>
           <Button variant="subtle">Accueil</Button>

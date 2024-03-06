@@ -3,6 +3,7 @@ import { MantineProvider } from "@mantine/core";
 import { Shell } from "./components/Shell/Shell";
 import { BrowserRouter } from "react-router-dom";
 import { Notifications } from "@mantine/notifications";
+import "@mantine/notifications/styles.css";
 
 export const App = () => {
   return (
@@ -57,4 +58,3 @@ export const App = () => {
     </MantineProvider>
   );
 };
-

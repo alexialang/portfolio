@@ -9,8 +9,8 @@ body{
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items:center
-;
+  align-items:center;
+  justify-content: center;
 flex-direction: row;
  
 }
@@ -23,7 +23,8 @@ flex-direction: column;
   justify-content: space-between;
     & img{
       height: 350px;
-      margin-left: 130px;
+      margin-left: 230px;
+      
       
     }
     & .h1 { 
@@ -371,7 +372,7 @@ li{
     align-items: center;
       & img {
         margin-top: 80px;
-      
+        margin-right: 60px;
         height: 120px;
       }
   }
@@ -385,6 +386,7 @@ li{
   
   
 }
+
 
 @media (max-width :880px){
   .blockProjets{
@@ -441,6 +443,9 @@ li{
   .backgroundColor {
     width: 250px;
   }
+  .backgroundGpadi,.backgroundToDo,.backgroundCalculator,.backgroundCloud{
+    width:170px ;
+  }
     
  }
  @media (min-width:693px){
@@ -453,5 +458,15 @@ li{
     height: 100px;}
     
  }
- 
+ @media (min-width:1200px){
+  .firstSection{
+    & img{
+      margin-right: 230px;
+    }
+  }
+ }
+ @media (min-width:1700px){
+  .fixedContainer {
+    height: 150px;}
+ }
  

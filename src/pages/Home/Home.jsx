@@ -10,10 +10,10 @@ import {
   Button,
   Textarea,
   Checkbox,
+  Anchor,
 } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
 import emailJs from "@emailjs/browser";
-import { Link } from "react-scroll";
 
 const Home = () => {
   emailJs.init(import.meta.env.VITE_MAILJS_API_KEY);
@@ -24,39 +24,46 @@ const Home = () => {
     email: "",
     phoneNumber: "",
     message: "",
+
+    validate: {
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+    },
   });
 
   const sendEmail = (values) => {
-    emailJs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONTACT,
-        {
-          firstName: values.firstName,
-          lastName: values.lastName,
-          email: values.email,
-          message: values.message,
-          phoneNumber: values.phoneNumber,
-        }
-      )
-      .then(() => {
-        showNotification({
-          title: "Email envoyé",
-          message: "Votre email a bien été envoyé",
-          color: "green",
-          autoClose: 5000,
+    return new Promise((resolve, reject) => {
+      emailJs
+        .send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONTACT,
+          {
+            firstName: values.firstName,
+            lastName: values.lastName,
+            email: values.email,
+            message: values.message,
+            phoneNumber: values.phoneNumber,
+          }
+        )
+        .then(() => {
+          showNotification({
+            title: "Email envoyé",
+            message: "Votre email a bien été envoyé",
+            color: "green",
+            autoClose: 5000,
+          });
+          resolve();
+        })
+        .catch((error) => {
+          showNotification({
+            title: "Erreur",
+            message: "Une erreur est survenue",
+            color: "red",
+            autoClose: 5000,
+          });
+          reject(error);
         });
-      })
-      .catch(() => {
-        showNotification({
-          title: "Erreur",
-          message: "Une erreur est survenue",
-          color: "red",
-          autoClose: 5000,
-        });
-      });
+    });
   };
-
   return (
     <div className={classes.root}>
       <div id="home" className={classes.firstSection}>
@@ -322,11 +329,11 @@ const Home = () => {
                   label={
                     <>
                       En cochant cette case, j’accepte la
-                      <Link href="/conf" target="_blank" inherit>
+                      <Anchor href="/conf" target="_blank" inherit>
                         <p className={classes.link}>
                           Politique de confidentialité de ce site
                         </p>
-                      </Link>
+                      </Anchor>
                     </>
                   }
                 />
