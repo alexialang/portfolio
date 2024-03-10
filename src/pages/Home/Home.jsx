@@ -2,6 +2,13 @@ import classes from "./home.module.css";
 import Titre from "../../components/Titre/Titre";
 // import BlurSection from "../../components/BlurSection/BlurSection";
 import { useForm } from "@mantine/form";
+import alexia from "../../assets/alexia.png";
+import alexiaPetite from "../../assets/alexiaPetite.png";
+import cv from "../../assets/cv.png";
+import CV_LANG_Alexia from "../../assets/CV_LANG_Alexia.pdf";
+import github_black from "../../assets/github_black.png";
+import github from "../../assets/github.png";
+import linkedin from "../../assets/linkedin.png";
 import {
   Progress,
   TextInput,
@@ -68,7 +75,7 @@ const Home = () => {
     <div className={classes.root}>
       <div id="home" className={classes.firstSection}>
         <div className={classes.backgroundFirstSection}>
-          <img src="/src/assets/alexia.png" />
+          <img src={alexia} />
           <div className={classes.h1}>
             <div className={classes.fixedContainer}>
               <Titre contenu="    <h1> LANG  Alexia Developpeuse Web Junior </h1>" />
@@ -111,10 +118,7 @@ const Home = () => {
             impatiente de contribuer à des projets innovants et stimulants.
           </p>
         </div>
-        <img
-          className={classes.pictApropos}
-          src="/src/assets/alexiaPetite.png"
-        ></img>
+        <img className={classes.pictApropos} src={alexiaPetite}></img>
       </div>
       <div id="competence" className={classes.skills}>
         <h2>Mes compétences</h2>
@@ -179,10 +183,10 @@ const Home = () => {
             <br />
           </div>
           <div>
-            <img src="../../src/assets/cv.png"></img>
+            <img src={cv} alt="cv"></img>
             <a
               className={classes.alignCenter}
-              href="../../src/assets/CV_LANG_Alexia.pdf"
+              href={CV_LANG_Alexia}
               download="CV_LANG_Alexia"
             >
               <div>
@@ -258,7 +262,7 @@ const Home = () => {
               rel="noreferrer"
               href="https://github.com/alexialang"
             >
-              <img src="../../src/assets/github_black.png" />
+              <img src={github_black} />
             </a>
           </div>
           <a
@@ -404,14 +408,14 @@ const Home = () => {
                 rel="noreferrer"
                 href="https://github.com/alexialang"
               >
-                <img src="../../src/assets/github.png" />
+                <img src={github} alt="github" />
               </a>
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.linkedin.com/in/alexia-lang/"
               >
-                <img src="../../src/assets/linkedin.png" />
+                <img src={linkedin} alt="linkedin" />
               </a>
             </li>
             <li></li>
