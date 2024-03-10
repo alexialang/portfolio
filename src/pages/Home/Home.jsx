@@ -81,17 +81,34 @@ const Home = () => {
         <div>
           <h2>A propos</h2>
           <p>
-            En reconvertion professionnel je suis en formation de développeuse
-            Web/Web mobile au sein de Metz Numeric School. Après avoir réalisé
-            des études dans l’art, le design et travaillé presque 3 ans dans la
-            joaillerie en tant que sertisseuse, j’ai décidé de me réorienter. La
-            réflexion et la logique manquant grandement dans mon domaine, c’est
-            avec l’envie et le besoin d’apprendre que je me suis naturellement
-            tournée vers le développement car j’ai toujours eu un fort attrait
-            pour le monde du numerique.En reconvertion professionnel je suis en
-            formation de développeuse Web/Web mobile au sein de Metz Numeric
-            School. Après avoir réalisé des études dans l’art, le design et
-            travaillé presque 3 ans dans l
+            En reconversion professionnelle, je me forme actuellement en tant
+            que développeuse Web/Web mobile au sein de Metz Numeric School.
+            Après avoir exploré le domaine de l’art et du design, ainsi que
+            travaillé pendant près de trois ans dans le secteur de la joaillerie
+            en tant que sertisseuse, j’ai ressenti le besoin de pivoter ma
+            carrière. La créativité et le sens esthétique acquis dans mes études
+            et expériences précédentes se marient désormais avec ma passion pour
+            la logique et la résolution de problèmes offerte par le monde de la
+            programmation. <br />
+            <br />
+            Ce changement n’est pas seulement une décision professionnelle, mais
+            aussi une réponse à un appel intérieur profond. Animée par la
+            curiosité et la soif d’apprendre, je me suis naturellement orientée
+            vers le développement web, un domaine qui incarne l’avenir numérique
+            et offre un potentiel d’innovation infini. <br />
+            <br />
+            Aujourd’hui, je suis à la recherche d’opportunités de stage et
+            d’alternance pour l’année à venir. Mon objectif est de mettre en
+            pratique mes compétences fraîchement acquises tout en continuant à
+            élargir mes connaissances et à contribuer de manière significative à
+            des projets concrets. <br />
+            <br />
+            Je suis convaincue que chaque défi est une opportunité
+            d’apprentissage, et je suis prête à m’investir pleinement dans des
+            missions qui me permettront de progresser et d’évoluer en tant que
+            développeuse web junior. Je suis ouverte à toutes les opportunités
+            de collaboration dans le domaine du développement web et je suis
+            impatiente de contribuer à des projets innovants et stimulants.
           </p>
         </div>
         <img
@@ -165,8 +182,8 @@ const Home = () => {
             <img src="../../src/assets/cv.png"></img>
             <a
               className={classes.alignCenter}
-              href="fichier.html"
-              download="../../src/assets/cv.png"
+              href="../../src/assets/CV_LANG_Alexia.pdf"
+              download="CV_LANG_Alexia"
             >
               <div>
                 <Button variant="filled">Télécharger mon cv</Button>
@@ -192,7 +209,7 @@ const Home = () => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <Button>Acceder au projet</Button>
+                  <Button>Accéder au projet</Button>
                 </a>
               </div>
             </div>
@@ -210,7 +227,7 @@ const Home = () => {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <Button>Acceder au projet</Button>
+                  <Button>Accéder au projet</Button>
                 </a>
               </div>
             </div>
@@ -222,12 +239,37 @@ const Home = () => {
                 <p className={classes.txtCard}>Todo List JS</p>
               </div>
               <div className={classes.alignCenter}>
-                <Button>Acceder au projet</Button>
+                <a
+                  href="https://todolist-lang-alexia.firebaseapp.com/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <Button>Accéder au projet</Button>
+                </a>
               </div>
             </div>
           </div>
+        </div>{" "}
+        <div className={classes.git}>
+          <h3>Voir plus </h3>
+          <div className={classes.boxGit}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/alexialang"
+            >
+              <img src="../../src/assets/github_black.png" />
+            </a>
+          </div>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/alexialang"
+          >
+            <p> Accéder à mon github</p>
+          </a>
         </div>
-        <div className={classes.blockProjets}>
+        {/* <div className={classes.blockProjets}>
           <div>
             <div className={classes.backgroundColor}>
               <div className={classes.backgroundCloud}></div>
@@ -253,7 +295,11 @@ const Home = () => {
               </div>
 
               <div className={classes.alignCenter}>
-                <a href="https://calculette-js.web.app/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/alexialang"
+                >
                   <Button>Acceder au projet</Button>
                 </a>
               </div>
@@ -272,8 +318,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div></div>
+        </div>*/}
       </div>
       {/* CONTACT */}
       <div className={classes.contact} id="contact">
@@ -354,10 +399,18 @@ const Home = () => {
           <ul>
             <li>+33646613228</li> <li>alexialang2@gmail.com</li>
             <li className={classes.alignItem}>
-              <a href="https://github.com/alexialang">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/alexialang"
+              >
                 <img src="../../src/assets/github.png" />
               </a>
-              <a href="https://www.linkedin.com/in/alexia-lang/">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/alexia-lang/"
+              >
                 <img src="../../src/assets/linkedin.png" />
               </a>
             </li>
