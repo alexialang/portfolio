@@ -26,7 +26,6 @@ Button{color: #fff;
     flex-direction: row;
     align-items: center;
     width: 100%;
-  
     position: fixed;
     top: 0;
     background-color: rgb(255, 255, 255);
@@ -48,11 +47,12 @@ Button{color: #fff;
 @media (max-width: 700px) {
   .logo {
     margin: 0;
-    width: 75px;
+    width: 80px;
+    padding-bottom: 5px;
   }
 
   .root {
-    padding: 12px 0 0 12px;
+    padding: 12px 0 10px 12px;
     display: flex;
     flex-direction: row;
     align-items: center;

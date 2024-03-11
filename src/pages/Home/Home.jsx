@@ -222,7 +222,7 @@ const Home = () => {
             <div className={classes.backgroundColor}>
               <div className={classes.backgroundCalculator}></div>
               <div>
-                <p className={classes.txtCard}>Calculette Js</p>
+                <p className={classes.txtCard}>Calculette HTML,CSS, JS</p>
               </div>
 
               <div className={classes.alignCenter}>
@@ -240,7 +240,7 @@ const Home = () => {
             <div className={classes.backgroundColor}>
               <div className={classes.backgroundToDo}></div>
               <div>
-                <p className={classes.txtCard}>Todo List JS</p>
+                <p className={classes.txtCard}>Todo List HTML,CSS, JS</p>
               </div>
               <div className={classes.alignCenter}>
                 <a

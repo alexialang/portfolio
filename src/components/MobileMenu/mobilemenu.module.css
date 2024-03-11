@@ -32,11 +32,13 @@
 .mobileMenu {
   position: relative;
   background-color: none; /* Pour positionner correctement le contenu du menu */
+  width:fit-content;
 }
 
 
 
 .opened .nav {
+  padding-top: 12px;
   transform: translateX(0);
   background-color: white; /* Afficher la navigation en la déplaçant vers la gauche */
 }
@@ -44,4 +46,24 @@
 .nav{
   background-color: none;
 }
+.burgerImage{
+  height: 50px;
+  width: 40px;
+  padding-top: 20px;
+  padding-left: 10px;
 
+}
+.menu{
+  height: 80%;
+}
+.git{
+  height: 50px;
+  width: 50px;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
