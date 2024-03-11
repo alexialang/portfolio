@@ -7,15 +7,19 @@ import githubPurple from "../../assets/githubPurple.png";
 import linkedin from "../../assets/linkedinPurple.png";
 
 export const MobileMenu = ({ onClose }) => {
+  // État pour déterminer si le menu est ouvert ou fermé
   const [menuClosed, setMenuClosed] = useState(true);
 
+  // Fonction pour basculer entre l'ouverture et la fermeture du menu
   const toggleMenu = () => {
     setMenuClosed(!menuClosed);
-    onClose();
+    // Fermer le menu mobile lorsque le bouton est cliqué
   };
 
   const handleClick = (anchor) => {
+    // Rediriger vers l'ancre
     window.location.hash = anchor;
+    onClose();
   };
 
   return (
