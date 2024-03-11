@@ -104,8 +104,10 @@ const Home = () => {
             vers le développement web, un domaine qui incarne l’avenir numérique
             et offre un potentiel d’innovation infini. <br />
             <br />
-            Aujourd’hui, je suis à la recherche d’opportunités de stage et
-            d’alternance pour l’année à venir. Mon objectif est de mettre en
+            Aujourd’hui, je suis à la recherche d’une opportunité de stage du 22
+            juillet au 12 septembre 2024, ainsi que d’une alternance à partir
+            d’octobre 2024 pour une durée d’un an afin de poursuivre mes études
+            et de réaliser un Bac+3 full stack. Mon objectif est de mettre en
             pratique mes compétences fraîchement acquises tout en continuant à
             élargir mes connaissances et à contribuer de manière significative à
             des projets concrets. <br />
@@ -153,7 +155,7 @@ const Home = () => {
             <Progress
               className={classes.bar}
               color="rgb(201, 197, 175)"
-              value={45}
+              value={35}
               animated
             />{" "}
             <br />
